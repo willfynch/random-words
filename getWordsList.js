@@ -1,4 +1,4 @@
-import { bdd } from "../bdd.js";
+import { bdd } from "./bdd.js";
 
  
 
