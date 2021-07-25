@@ -1,5 +1,3 @@
-import {getRandomWords} from "./getRandomWords.js";
-
 const launchRandomButton = document.getElementById("launchRandomButton"); 
 const quantityField = document.getElementById("quantityField");
 const languageField = document.getElementById("languageField");
@@ -49,14 +47,70 @@ const setCardStyles = () => {
         wordCard.classList.add("text-center"); 
     }
 
-    for (let word of words){
-       
-    }
-    
-     
-
-
 }
+
+const getRandomWords = (language, quantity) => { 
+    const wordsList = getWordsList(language); 
+    console.log(wordsList); 
+    
+    let returnedWords = [];  
+
+    if (wordsList.length < quantity ){
+        quantity = wordsList.length; 
+    }
+
+    while (returnedWords.length < quantity){
+
+        let number = Math.floor(Math.random() * wordsList.length);
+
+        if(!returnedWords.includes(wordsList[number])){
+            returnedWords.push(wordsList[number]);
+        }
+    }
+
+    console.log(returnedWords); 
+    return returnedWords;
+}
+
+const getWordsList = (language) => {
+    let wordsList;
+    switch (language){
+        case "french":
+            wordsList = bdd.french;
+            break;
+
+        case "english":
+            wordsList = bdd.english;
+            break; 
+    }
+    return wordsList; 
+}
+
+const bdd = {
+    french: [
+        "varappe",
+        "chaille",
+        "sémillant",
+        "guinder",
+        "grésil",
+        "noria",
+        "affidé", 
+        "aubier"
+    ],
+
+    english: [
+        "venue",
+        "minute",
+        "foster",
+        "utmost",
+        "whereby",
+        "paddling",
+        "incurred",
+        "withhold"
+    ]
+}
+
+
 
 
 
