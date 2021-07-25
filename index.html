@@ -22,6 +22,16 @@
         </nav>
 
         <div id="" class=" d-flex justify-content-center flex-column element">
+
+            <div id="addWordContainer" class="m-2 d-flex flex-row space-around">
+                <input id="addNewWordField" class="flex-grow-1" type="text" placeholder="Ajouter un mot">
+                <select name="language" id="addNewWordSelectLanguageField">
+                    <option value="french">Français</option>
+                    <option value="english">Anglais</option>
+                </select>
+                <button id="addNewWordButton" class="btn btn-primary">Ajouter</button>
+            </div>
+
             <div id="quantityContainer" class="m-2 d-flex justify-content-center flex-column ">
                 <label for="quantity"></label>
                 <input type="number" id="quantityField" name="quantity" min="1" max="100" class="">
@@ -89,4 +99,5 @@
 <script type="module" src="bdd.js"></script>
 <script type="module" src="/functions/getWordsList.js"></script>
 <script type="module" src="/functions/getRandomWords.js" ></script>
+<script type="module" src="/functions/addNewWord.js" ></script>
 </html>

@@ -7,7 +7,24 @@ const bdd = {
         "grésil",
         "noria",
         "affidé", 
-        "aubier"
+        "aubier",
+        "dilection",
+        "avuer",
+        "tectrice",
+        "ubéreux",
+        "contumélie",
+        "parhélie",
+        "obduration",
+        "térébrant",
+        "roboratif",
+        "édicule",
+        "il appert",
+        "appariteur",
+        "cabochon",
+        "damassé",
+        "factieux",
+        "hune",
+        "hémicrânie"
     ],
 
     english: [
@@ -18,7 +35,22 @@ const bdd = {
         "whereby",
         "paddling",
         "incurred",
-        "withhold"
+        "withhold",
+        "compliance",
+        "dwell",
+        "padlock",
+        "seamless",
+        "standstill",
+        "crate",
+        "relentless",
+        "outpouring",
+        "tender",
+        "unvicted",
+        "poach",
+        "unenforceable",
+        "rig",
+        "grapple with",
+        "to expell"
     ]
 }
 

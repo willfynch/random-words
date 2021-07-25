@@ -10,13 +10,13 @@ launchRandomButton.addEventListener('click', function getWordsQuantity() {
     const quantity = quantityField.valueAsNumber; 
     const language = languageField.value; 
 	const returnedWords = getRandomWords(language, quantity);
-    displayCards(returnedWords); 
+    displayCards(language, returnedWords); 
     setCardStyles(); 
 });
 
 
-const displayCards = (returnedWords) => {
-
+const displayCards = (language, returnedWords) => {
+    
     let html = ""; 
     let cardStyles = {
         boxShadow: "0 4px 8px 0 rgba(0,0,0,0.2)",
@@ -27,7 +27,18 @@ const displayCards = (returnedWords) => {
     };
 
     returnedWords.forEach( (word) => {
-        const card = `<div class="wordCard"><h5 class="word">${word}</h3></div>`
+        let url = ""; 
+        console.log(language); 
+        switch (language){
+            case "french":
+                url = `https://www.cnrtl.fr/definition/${word}`
+                break;
+
+            case "english":
+                url = `https://www.merriam-webster.com/dictionary/${word}`
+                break;
+        }
+        const card = `<div class="wordCard"><h5 class="word"><a target="_blank" href="${url}">${word}</a></h3></div>`
         html += card; 
     })
 
